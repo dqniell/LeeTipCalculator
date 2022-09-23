@@ -5,29 +5,30 @@ import java.text.DecimalFormat;
 public class TipCalculator {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in); //allows the scanner to be used
+        DecimalFormat formatter = new DecimalFormat("#.##"); //allows the decimals to be correctly rounded
 
         System.out.print("How many people are in your group? ");
-        int amountOfPeople = scan.nextInt();
+        int amountOfPeople = scan.nextInt(); //this will save the integer for the amount of people
 
         System.out.print("What is the tip percentage? Please enter only the number. ");
-        int taxRate = scan.nextInt();
+        int taxRate = scan.nextInt(); //this will save the tax percentage
 
         System.out.print("Enter a cost in dollars and cents. Type in -1 to end. ");
-        double cost = scan.nextDouble();
+        double cost = scan.nextDouble(); //this will differ per user input, as used later in while loop.
 
-        double totalCost = cost;
+        double totalCost = cost; //first sets the total cost to be equal to the first input of cost
 
-        while (cost != -1) {
+        while (cost != -1) { //while loop
             System.out.print("Enter a cost in dollars and cents. Type in -1 to end. ");
-            cost = scan.nextDouble();
-            totalCost += cost;
+            cost = scan.nextDouble(); //saves the input as a double
+            totalCost += cost; //this is how the total cost will be updated.
         }
 
-        double totalTip = (taxRate * 0.01) * totalCost;
+        double totalTip = (taxRate * 0.01) * totalCost; //turns the integer inputted for the tax percentage into an integer, and multiplies it to find the total tip
         String formattedTotalTip = formatter.format(totalTip);
 
-        double tipAndCost = totalTip + totalCost;
+        double tipAndCost = totalTip + totalCost; //saves double
         String formattedTipAndCost = formatter.format(tipAndCost);
 
         double perPersonNoTip = totalCost / amountOfPeople;
@@ -51,6 +52,7 @@ public class TipCalculator {
         System.out.println("Tip Per Person: " + tipPer);
         System.out.println("Total Cost Per Person: " + totalPerPerson);
 
+        System.out.println("----------------");
 
 
     }
