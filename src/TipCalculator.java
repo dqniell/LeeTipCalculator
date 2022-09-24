@@ -25,6 +25,9 @@ public class TipCalculator {
             totalCost += cost; //this is how the total cost will be updated.
         }
 
+        totalCost = totalCost; //declares variable for the format
+        String formattedTotalCost = formatter.format(totalCost);
+
         double totalTip = (taxRate * 0.01) * totalCost; //turns the integer inputted for the tax percentage into an integer, and multiplies it to find the total tip
         String formattedTotalTip = formatter.format(totalTip);
 
@@ -32,25 +35,23 @@ public class TipCalculator {
         String formattedTipAndCost = formatter.format(tipAndCost);
 
         double perPersonNoTip = totalCost / amountOfPeople;
-        String formattedperPersonNoTIp = formatter.format(perPersonNoTip);
+        String formattedPerPersonNoTip = formatter.format(perPersonNoTip);
 
         double tipPer = totalTip / amountOfPeople;
-        String formattedtipPer = formatter.format(tipPer);
-
+        String formattedTipPer = formatter.format(tipPer);
 
         double totalPerPerson = tipAndCost / amountOfPeople;
-        String formattedtotalPerPerson = formatter.format(totalPerPerson);
-
+        String formattedTotalPerPerson = formatter.format(totalPerPerson);
 
         System.out.println("----------------");
 
-        System.out.println("Total bill before tip: " + totalCost);
+        System.out.println("Total bill before tip: " + formattedTotalCost);
         System.out.println("Tax Percentage: " + taxRate);
-        System.out.println("Total Tip: " + totalTip);
-        System.out.println("Total bill with tip: " + tipAndCost);
-        System.out.println("Per Person Cost Before Tip: " + perPersonNoTip);
-        System.out.println("Tip Per Person: " + tipPer);
-        System.out.println("Total Cost Per Person: " + totalPerPerson);
+        System.out.println("Total Tip: " + formattedTotalTip);
+        System.out.println("Total bill with tip: " + formattedTipAndCost);
+        System.out.println("Per Person Cost Before Tip: " + formattedPerPersonNoTip);
+        System.out.println("Tip Per Person: " + formattedTipPer);
+        System.out.println("Total Cost Per Person: " + formattedTotalPerPerson);
 
         System.out.println("----------------");
 
