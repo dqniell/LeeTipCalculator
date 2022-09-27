@@ -22,7 +22,9 @@ public class TipCalculator {
         while (cost != -1) { //while loop
             System.out.print("Enter a cost in dollars and cents. Type in -1 to end. ");
             cost = scan.nextDouble(); //saves the input as a double
-            totalCost += cost; //this is how the total cost will be updated.
+            if(cost != -1) {
+                totalCost += cost; //this is how the total cost will be updated.
+            }
         }
 
         totalCost = totalCost; //declares variable for the format
