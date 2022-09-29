@@ -18,7 +18,7 @@ public class TipCalculator {
         int taxRate = scan.nextInt(); //this will save the tax percentage
         scan.nextLine();
 
-        System.out.print("Enter a cost in dollars and cents, e.g. 12.0050 (Type in -1 to end): ");
+        System.out.print("Enter a cost in dollars and cents, e.g. 12.50 (Type in -1 to end): ");
         double cost = scan.nextDouble(); //this will differ per user input, as used later in while loop.
 
         double totalCost = cost; //first sets the total cost to be equal to the first input of cost
