@@ -8,11 +8,15 @@ public class TipCalculator {
         Scanner scan = new Scanner(System.in); //allows the scanner to be used
         DecimalFormat formatter = new DecimalFormat("#.##"); //allows the decimals to be correctly rounded
 
+        System.out.println("Welcome!");
+
         System.out.print("How many people are in your group? ");
         int amountOfPeople = scan.nextInt(); //this will save the integer for the amount of people
+        scan.nextLine();
 
         System.out.print("What is the tip percentage? Please enter only the number. ");
         int taxRate = scan.nextInt(); //this will save the tax percentage
+        scan.nextLine();
 
         System.out.print("Enter a cost in dollars and cents. Type in -1 to end. ");
         double cost = scan.nextDouble(); //this will differ per user input, as used later in while loop.
@@ -57,6 +61,7 @@ public class TipCalculator {
 
         System.out.println("----------------");
 
+        scan.close();
 
     }
 }
