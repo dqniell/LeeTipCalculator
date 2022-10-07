@@ -3,8 +3,7 @@ public class TipCalculator {
     private int numPeople;
     private int tipPercentage;
     private double totalBillBeforeTip;
-//    private double costTip;
-//    private double totalAmount;
+
 
 
     public TipCalculator(int amountOfPeople, int tipPercentage) {
